@@ -1,0 +1,11 @@
+--- pip	2018-07-04 18:58:24.049731617 +0800
++++ pipnew	2018-07-04 18:59:07.337855855 +0800
+@@ -6,6 +6,6 @@
+ # Run the main entry point, similarly to how setuptools does it, but because
+ # we didn't install the actual entry point from setup.py, don't use the
+ # pkg_resources API.
+-from pip import main
++from pip import __main__
+ if __name__ == '__main__':
+-    sys.exit(main())
++    sys.exit(__main__._main())
